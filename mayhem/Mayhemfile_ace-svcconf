@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: ace-svcconf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ace-svcconf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_svcconf
+    libfuzzer: true
+    timeout: 10

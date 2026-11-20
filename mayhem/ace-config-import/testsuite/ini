@@ -1,0 +1,6 @@
+[Section1]
+key1=value1
+key2 = "quoted value"
+
+[Section1\\Sub]
+num=42

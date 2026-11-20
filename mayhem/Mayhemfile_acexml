@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: acexml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/acexml/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_acexml
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: inet-ftp-response
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inet-ftp-response/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ftp_response
+    libfuzzer: true
+    timeout: 10

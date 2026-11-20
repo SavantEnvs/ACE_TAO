@@ -1,0 +1,18 @@
+module E {
+  const long A = (1 << 4) | 0x0F & ~2;
+  const unsigned long long B = 18446744073709551615;
+  const double D = 1.5e3 / 3.0 - 2;
+  const string S = "abc" ;
+  const char C = 'x';
+  const fixed F = 123.45d;
+  const short M = A % 7;
+  typedef sequence<long, A> LS;
+  typedef long Arr[3][M];
+  enum Col { red, green, blue };
+  const Col K = green;
+  union U switch (Col) { case red: long x; case green: string y; default: octet z; };
+  struct T { LS s; Arr a; U u; };
+  exception Ex { string why; };
+  interface I { attribute long at; void op(in T t, out string s, inout any a) raises (Ex); };
+  valuetype V { public long n; factory make(in long n); };
+};

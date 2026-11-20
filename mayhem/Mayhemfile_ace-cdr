@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: ace-cdr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ace-cdr/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cdr
+    libfuzzer: true
+    timeout: 10

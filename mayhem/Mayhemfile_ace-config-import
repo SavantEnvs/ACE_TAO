@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: ace-config-import
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ace-config-import/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_config_import
+    libfuzzer: true
+    timeout: 10

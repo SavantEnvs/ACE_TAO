@@ -1,0 +1,4 @@
+# build trees written by mayhem/build.sh
+/build-tests/
+/fuzz-bin/
+/build-afl/

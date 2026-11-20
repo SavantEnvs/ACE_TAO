@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: inet-http
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inet-http/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_http
+    libfuzzer: true
+    timeout: 10

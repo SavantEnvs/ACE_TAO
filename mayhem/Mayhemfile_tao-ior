@@ -1,0 +1,9 @@
+project: savantenvs/ACE_TAO
+target: tao-ior
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tao-ior/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tao_ior
+    libfuzzer: true
+    timeout: 10

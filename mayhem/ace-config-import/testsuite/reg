@@ -1,0 +1,4 @@
+[Root\\Software]
+"name"="value"
+"dw"=dword:0000002a
+"bin"=hex:01,02,ff

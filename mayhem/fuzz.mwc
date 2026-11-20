@@ -1,0 +1,16 @@
+// MPC workspace for the sanitized fuzz build (mayhem/build.sh): the libraries the harnesses use,
+// plus tao_idl (and ace_gperf, which the TAO build needs).
+workspace {
+  ../ACE/ace/ace.mpc
+  ../ACE/ace/ETCL/ETCL.mpc
+  ../ACE/ACEXML/common/common.mpc
+  ../ACE/ACEXML/parser/parser/parser.mpc
+  ../ACE/protocols/ace/INet/inet.mpc
+  ../ACE/ASNMP/asnmp/asnmp.mpc
+  ../ACE/apps/gperf/src/gperf.mpc
+  ../TAO/TAO_IDL/tao_idl_fe.mpc
+  ../TAO/TAO_IDL/tao_idl_be.mpc
+  ../TAO/TAO_IDL/tao_idl.mpc
+  ../TAO/tao/tao.mpc
+  ../TAO/tao/AnyTypeCode/AnyTypeCode.mpc
+}

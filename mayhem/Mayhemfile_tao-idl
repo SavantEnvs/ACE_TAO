@@ -1,0 +1,16 @@
+project: savantenvs/ACE_TAO
+target: tao-idl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tao-idl/testsuite
+cmds:
+  # AFL-instrumented tao_idl (IDL front end), built by mayhem/build.sh step 1b.
+  # Bare @@ with no filepath: with `filepath: input.idl` Mayhem's smoke test reported the target
+  # "does not use the file input" and the run failed with 0 edges. tao_idl's front end (lexer,
+  # parser, AST) does not need a .idl suffix; only the back end's output file naming uses it.
+  - cmd: /mayhem/mayhem/build-afl/TAO/TAO_IDL/tao_idl -as -o out @@
+    afl: true
+    timeout: 20
+    env:
+      ACE_ROOT: /mayhem/ACE
+      TAO_ROOT: /mayhem/TAO
